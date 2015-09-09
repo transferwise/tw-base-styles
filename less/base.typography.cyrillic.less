@@ -1,0 +1,138 @@
+@import "base.colors.less";
+
+/* Licensing for Avenir Next
+This CSS resource incorporates links to font software which is the valuable copyrighted
+property of Monotype Imaging and/or its suppliers. You may not attempt to copy, install,
+redistribute, convert, modify or reverse engineer this font software. Please contact Monotype
+Imaging with any questions regarding Web Fonts:  http://webfonts.assets.com
+*/
+
+
+@import url("https://fast.fonts.net/t/1.css?apiType=css&projectid=72828c65-8416-4408-aa6f-d07ba2d076f9");
+
+@font-face{
+	font-family:"Avenir Next Cyr";
+	src:url("/assets/AvenirCyrillic/069faa0e-9913-48c4-9ef7-89a4bc080b65.eot?#iefix");
+	src:url("/assets/AvenirCyrillic/069faa0e-9913-48c4-9ef7-89a4bc080b65.eot?#iefix") format("eot"),url("/assets/AvenirCyrillic/7db1f672-3a8f-4d19-9c49-7f61aed450b5.woff2") format("woff2"),url("/assets/AvenirCyrillic/4ab86b35-c0c2-42b5-98ad-4b6eba66b197.woff") format("woff"),url("/assets/AvenirCyrillic/276b3566-1c3b-4bc1-8915-15314f091f29.ttf") format("truetype"),url("/assets/AvenirCyrillic/5d02f5f4-46e7-453a-aef9-3e7106d7bb68.svg#5d02f5f4-46e7-453a-aef9-3e7106d7bb68") format("svg");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face{
+	font-family:"Avenir Next Cyr";
+	src:url("/assets/AvenirCyrillic/c6970a14-8b0f-4629-9072-71c7e123908f.eot?#iefix");
+	src:url("/assets/AvenirCyrillic/c6970a14-8b0f-4629-9072-71c7e123908f.eot?#iefix") format("eot"),url("/assets/AvenirCyrillic/b0b84e4d-2164-45c7-a674-1662f19f3ba6.woff2") format("woff2"),url("/assets/AvenirCyrillic/e91d1bbf-3fea-45e2-b003-a22b12ce6e5f.woff") format("woff"),url("/assets/AvenirCyrillic/ead8b64b-1abd-4d5b-a642-a21dfe2f463b.ttf") format("truetype"),url("/assets/AvenirCyrillic/e536e1c2-92a4-4db4-8a41-1c55354d11b7.svg#e536e1c2-92a4-4db4-8a41-1c55354d11b7") format("svg");
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face{
+	font-family:"Avenir Next Cyr";
+	src:url("/assets/AvenirCyrillic/fbf4298d-ef75-419c-b615-47f209a48ed2.eot?#iefix");
+	src:url("/assets/AvenirCyrillic/fbf4298d-ef75-419c-b615-47f209a48ed2.eot?#iefix") format("eot"),url("/assets/AvenirCyrillic/40d36b4a-60c6-460a-bf43-4c948c23563e.woff2") format("woff2"),url("/assets/AvenirCyrillic/45b78f45-e639-4836-8612-e0892e120f14.woff") format("woff"),url("/assets/AvenirCyrillic/cbc021cc-b96f-4c82-ba0d-59cb0b7449c0.ttf") format("truetype"),url("/assets/AvenirCyrillic/c6778bcf-ca82-4a86-8a5f-08b70c9a71fd.svg#c6778bcf-ca82-4a86-8a5f-08b70c9a71fd") format("svg");
+	font-weight: 600;
+	font-style: normal;
+}
+
+
+@base-font-size: 100%;
+@base-line-height: 150%;
+
+@font-primary: 'Avenir Next Cyr', 'Helvetica Neue', helvetica, arial, sans-serif;
+@font-secondary: 'Sharp Sans Frontieres', 'Helvetica Neue', helvetica, arial, sans-serif;
+@font-smoothing: antialiased;
+
+@font-weight-light: 300;
+@font-weight-normal: 300;
+@font-weight-medium: 500;
+@font-weight-bold: 800;
+
+@body-font-color: @color-text-black;
+@body-font-family: @font-primary;
+@body-font-weight: @font-weight-normal;
+@body-font-style: normal;
+
+@font-size-hero: 46px;
+@font-size-huge: 42px;
+@font-size-larger: 40px;
+@font-size-bit-larger: 35px;
+@font-size-large: 30px;
+@font-size-title: @font-size-large;
+@font-size-medium: 22px;
+@font-size-normal: 16px;
+@font-size-small: 14px;
+@font-size-tiny: 12px;
+
+
+.font-smoothing(@type:antialiased) {
+
+	-webkit-font-smoothing: @type;
+}
+
+body {
+
+	color: @body-font-color;
+	font-family: @font-primary;
+	font-size: @base-font-size;
+	line-height: @base-line-height;
+	font-weight: @body-font-weight;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+	font-size: @base-font-size;
+	//	font-weight: @body-font-weight;//font-weight-normal
+	font-weight: @font-weight-medium;
+	margin: 0;
+	text-rendering: optimizeLegibility;
+}
+
+a {
+
+	color: @color-text-secondary;
+}
+
+p {
+
+	margin: 12px 0;
+
+	// &:first-of-type {
+	// 	margin-top: 0;
+	// }
+
+	// &:last-of-type {
+	// 	margin-bottom: 0;
+	// }
+}
+
+
+// Temporary styles
+
+button.b-button {
+	font-family: @font-primary !important;
+}
+input.b-button {
+	font-family: @font-primary !important;
+}
+.b-hero__title,
+.b-benefits__title,
+.b-benefits__item-title,
+.b-testimonials__quote-body,
+.b-reviews__title,
+.b-transfer-map__title,
+.b-support__title,
+.b-authenticate-modal h1 {
+	font-family: @font-primary;
+}
+.b-trust-four-elements__branson-text {
+	margin-top: 0;
+}
+.b-authenticate-modal h1 {
+	font-size: 22px;
+}
+.b-hero__title {
+	font-size: 44px;
+}

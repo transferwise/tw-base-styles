@@ -1,0 +1,179 @@
+@import "base.flags.less";
+
+.background-image-retina(@src, @width, @height, @type:png) {
+	background-image: url('@{src}.@{type}');
+
+	@media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+		background-image: url('@{src}@2x.@{type}');
+		background-size: @width @height;
+	}
+}
+
+.border-radius(@radius) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+}
+
+.border-radius-top(@radius) {
+	-webkit-border-radius: @radius @radius 0 0;
+	-moz-border-radius: @radius @radius 0 0;
+	border-radius: @radius @radius 0 0;
+}
+
+.border-radius-bottom(@radius) {
+	-webkit-border-bottom-right-radius: @radius;
+	-webkit-border-bottom-left-radius: @radius;
+	-moz-border-radius-bottomright: @radius;
+	-moz-border-radius-bottomleft: @radius;
+	border-bottom-right-radius: @radius;
+	border-bottom-left-radius: @radius;
+}
+
+.font-smoothing {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.clearfix() {
+	zoom: 1;
+
+	&:before {
+		content: '';
+		display: block;
+	}
+
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+.flag(@code) {
+	background-image: url('@{image-base}common/flags/16/@{code}.png');
+	background-repeat: no-repeat;
+
+	@media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+
+		background-image: url('@{image-base}common/flags/32/@{code}.png');
+		background-size: 16px 16px;
+	}
+}
+
+.hide-text() {
+	text-indent: -9999px;
+	overflow: hidden;
+	text-align: left;
+}
+
+.box-shadow {
+	box-shadow: 0 1px 1px rgba(128, 128, 128, 0.2)
+}
+
+.box-shadow(@shadow) {
+	box-shadow: @shadow;
+}
+
+.vertical-center() {
+	position: relative;
+	top: 50%;
+	-ms-transform: translate(0, -50%);
+	-moz-transform: translate(0, -50%);
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.rotate3d(@x, @y, @z, @angle) {
+	-webkit-transform: rotate3d(@x, @y, @z, @angle);
+	-ms-transform: rotate3d(@x, @y, @z, @angle);
+	transform: rotate3d(@x, @y, @z, @angle);
+}
+
+.translate(@x, @y) {
+	-webkit-transform: translate(@x, @y);
+	-moz-transform: translate(@x, @y);
+	-ms-transform: translate(@x, @y);
+	transform:  translate(@x, @y);
+}
+
+.caret-down-v-centered(@color, @size, @right, @left) {
+	&:after {
+		.vertical-center;
+
+		content: ' ';
+		position: absolute;
+		right: @right;
+		left: @left;
+		width: 0;
+		height: 0;
+		border-left: @size solid transparent;
+		border-right: @size solid transparent;
+		border-top: @size solid @color;
+		pointer-events: none;
+	}
+}
+
+.caret-down(@color, @size, @right, @left, @top, @bottom) {
+	&:after {
+		content: ' ';
+		position: absolute;
+		right: @right;
+		left: @left;
+		top: @top;
+		bottom: @bottom;
+		width: 0;
+		height: 0;
+		border-left: @size solid transparent;
+		border-right: @size solid transparent;
+		border-top: @size solid @color;
+	}
+}
+
+.transition(@transition) {
+	-webkit-transition: @transition;
+	-moz-transition: @transition;
+	-o-transition: @transition;
+	transition: @transition;
+}
+
+.transition-delay(@delay) {
+	-webkit-transition-delay: @delay;
+	-o-transition-delay: @delay;
+	transition-delay: @delay;
+}
+
+.perspective(@perspective) {
+	-webkit-perspective: @perspective;
+	perspective: @perspective;
+}
+
+.backface-visibility(@backface-visibility) {
+	-webkit-backface-visibility: @backface-visibility;
+	backface-visibility: @backface-visibility;
+}
+
+.transform(@transform) {
+	-webkit-transform: @transform;
+	-ms-transform: @transform;
+	transform: @transform;
+}
+
+.transform-style(@transform-style) {
+	-webkit-transform-style: @transform-style;
+	transform-style: @transform-style;
+}
+
+//Legacy Mixins - please do not use and should be removed
+.gradient(@colorFrom, @colorTo) {
+	background: @colorFrom; /* Old browsers */
+	background: -moz-linear-gradient(top, @colorFrom 0%, @colorTo 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @colorFrom), color-stop(100%, @colorTo)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, @colorFrom 0%, @colorTo 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, @colorFrom 0%, @colorTo 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, @colorFrom 0%, @colorTo 100%); /* IE10+ */
+	background: linear-gradient(to bottom, @colorFrom 0%, @colorTo 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=@colorFrom, endColorstr=@colorTo, GradientType=0); /* IE6-9 */
+}
+
+

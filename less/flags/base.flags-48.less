@@ -1,0 +1,17 @@
+@countries48:
+US, GB, EU, PL, CH, NO, SE, DK, HU, GE, RO, TR, CZ, BG, AU, CA,
+HK, IN, MY, NZ, PH, SG, BR, AE, CO, CN, NG, PK, TH, MX, ZA, JP,
+MA, CL, UA, RU, ID;
+
+/* DO NOT CHANGE, IT WAS CAREFULLY RESEARCHED AND CALCULATED! */
+@ruubel-constant : 2.777%;
+
+.flags24(@n, @to) when (@n < @to) {
+	@c: extract(@countries48, @n);
+	.flag24_@{c} {
+		.flag-by-position(((@n - 1) * @ruubel-constant), 24px, 16px, 48);
+	}
+	.flags24(@n + 1, @to);
+}
+
+.flags24(1, length(@countries48) + 1);

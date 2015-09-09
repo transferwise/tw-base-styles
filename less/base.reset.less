@@ -1,0 +1,75 @@
+@import "base.reset.normalize.less";
+
+* {
+
+	&,
+	&:before,
+	&:after {
+
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+				box-sizing: border-box;
+	}
+}
+
+html {
+
+	margin: 0;
+	padding: 0;
+}
+
+body {
+
+	margin: 0;
+	padding: 0;
+}
+
+nav {
+
+	ul {
+
+		margin: 0;
+		padding: 0;
+
+		li {
+
+			list-style: none;
+		}
+	}
+}
+
+blockquote {
+
+	margin: 0;
+}
+
+input, textarea {
+
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+
+input[type="checkbox"] {
+
+	-webkit-appearance: checkbox;
+}
+
+input[type="radio"] {
+
+	-webkit-appearance: radio;
+}
+
+input,
+select {
+
+	&:focus {
+		outline: none;
+	}
+}
+
+button {
+
+	background: none;
+	border: 0;
+	cursor: pointer;
+}

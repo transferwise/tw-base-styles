@@ -1,0 +1,21 @@
+{
+  "name": "tw-base-styles",
+  "version": "0.0.1",
+  "authors": [
+    "Viacheslav Shelestovskyi <viacheslav.shelestovskyi@transferwise.com>"
+  ],
+  "description": "TransferWise base styles",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/transferwise/tw-base-styles.git"
+  },
+  "private": true
+}

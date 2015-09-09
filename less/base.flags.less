@@ -1,0 +1,15 @@
+@import "flags/base.flags-16.less";
+@import "flags/base.flags-32.less";
+@import "flags/base.flags-48.less";
+
+.flag-by-position(@yPosition, @w, @h, @origSize) {
+	background: url("/assets/common/flags/@{origSize}/flags.png") no-repeat;
+	background-position: 0 @yPosition;
+	background-size: cover;
+	width: @w;
+	height: @h;
+}
+
+.flag_none {
+	background-image: none !important;
+}

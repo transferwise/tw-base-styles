@@ -1,0 +1,87 @@
+@import "base.colors.less";
+
+@base-font-size: 100%;
+@base-line-height: 150%;
+
+@font-primary: 'Avenir W02', 'Helvetica Neue', helvetica, arial, sans-serif;
+@font-secondary: 'Sharp Sans Frontieres', 'Helvetica Neue', helvetica, arial, sans-serif;
+@font-smoothing: antialiased;
+
+@font-weight-light: 300;
+@font-weight-normal: 300;
+@font-weight-normal-to-medium: 400;
+@font-weight-medium: 500;
+@font-weight-bold: 800;
+
+@body-font-color: @color-text-black;
+@body-font-family: @font-primary;
+@body-font-weight: @font-weight-normal;
+@body-font-style: normal;
+
+@font-size-hero: 46px;
+@font-size-huge: 42px;
+@font-size-larger: 40px;
+@font-size-bit-larger: 35px;
+@font-size-large: 30px;
+@font-size-title: @font-size-large;
+@font-size-medium: 22px;
+@font-size-normal-to-medium: 18px;
+@font-size-normal: 16px;
+@font-size-normal-smaller: 15px;
+@font-size-small: 14px;
+@font-size-tiny: 12px;
+
+@font-size-us-title: 36px;
+@font-size-us-normal: 18px;
+@font-size-us-small: 12px;
+
+@line-height-us-normal: 30px;
+@line-height-us-title: 50px;
+@line-height-us-subtitle: 28px;
+
+
+.font-smoothing(@type:antialiased) {
+
+  -webkit-font-smoothing: @type;
+}
+
+body {
+
+  color: @body-font-color;
+  font-family: @font-primary;
+  font-size: @base-font-size;
+  line-height: @base-line-height;
+  font-weight: @body-font-weight;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+  font-size: @base-font-size;
+  //	font-weight: @body-font-weight;//font-weight-normal
+  font-weight: @font-weight-medium;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+
+  color: @color-text-secondary;
+}
+
+p {
+
+  margin: 12px 0;
+
+  // &:first-of-type {
+  // 	margin-top: 0;
+  // }
+
+  // &:last-of-type {
+  // 	margin-bottom: 0;
+  // }
+}

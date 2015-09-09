@@ -1,0 +1,14 @@
+@countries32:
+US, GB, EU, PL, CH, NO, SE, DK, HU, GE, RO, TR, CZ, BG, AU, CA,
+HK, IN, MY, NZ, PH, SG, BR, AE, CO, CN, NG, PK, TH, MX, ZA, JP,
+MA, CL, UA;
+
+.flags16(@n, @to) when (@n < @to) {
+	@c: extract(@countries32, @n);
+	.flag16_@{c} {
+		.flag-by-position((@n - 1) * -10px, 16px, 10px, 32);
+	}
+	.flags16(@n + 1, @to);
+}
+
+.flags16(1, length(@countries32) + 1);
