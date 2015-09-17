@@ -1,0 +1,114 @@
+.b-help {
+
+	display: inline-block;
+	position: absolute;
+	margin: 0px 0 0 6px;
+
+	&:hover {
+
+		.b-help__icon {
+
+			color: #fff;
+			background-color: @color-fill-neutral-light;
+		}
+
+		.b-help__tooltip, .b-help__image-tooltip {
+
+			display: block;
+		}
+	}
+}
+
+	.b-help__icon {
+
+		.border-radius(99px);
+
+		color: @color-fill-neutral;
+		text-align: center;
+		font-size: @font-size-tiny;
+		font-weight: @font-weight-medium;
+		line-height: 1.5;
+		display: inline-block;
+		position: relative;
+		vertical-align: middle;
+		left: 2px;
+		width: 17px;
+		height: 17px;
+		background-color: @color-fill-neutral-lighter;
+		cursor: pointer;
+
+		transition: all .1s;
+	}
+
+	.b-help__image-tooltip {
+		display: none;
+		position: absolute;
+		bottom: 10%;
+		left: 40%;
+		z-index: 9999;
+
+		&.m-left {
+			left: -320px;
+		}
+	}
+
+	.b-help__tooltip {
+
+	  	box-shadow: 0 2px 8px rgba(128, 128, 128, 0.2);
+		color: @color-text-black;
+		font-size: @font-size-small;
+		font-weight: @font-weight-normal;
+		line-height: 1.6;
+		display: none;
+		position: absolute;
+		bottom: 35px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 360px;
+		padding: 12px 18px;
+		background-color: @color-fill-white;
+		text-transform: none;
+		white-space: normal;
+		z-index: 9999;
+		text-align: center;
+		border-radius: 3px;
+
+		@media only screen and (max-width: @handheld) {
+			width: 300px;
+		}
+
+		a:hover {
+			color: @color-text-primary-dark;
+		}
+
+		&.m-question-mark {
+			margin-left: 5px;
+			margin-bottom: 8px;
+		}
+	}
+
+	.b-help__tooltip:before, .b-help__tooltip:after {
+	  top: 100%;
+	  left: 50%;
+	  border: solid transparent;
+	  content: " ";
+	  height: 0;
+	  width: 0;
+	  position: absolute;
+	  pointer-events: none;
+	}
+
+	.b-help__tooltip:before {
+	  border-color: rgba(194, 225, 245, 0);
+	  border-top-color: #F1F0F0;
+	  border-width: 12px;
+	  margin-left: -12px;
+	}
+
+	.b-help__tooltip:after {
+	  border-color: rgba(136, 183, 213, 0);
+	  border-top-color: #FFFFFF;
+	  border-width: 10px;
+	  margin-left: -10px;
+	}
+

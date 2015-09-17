@@ -1,0 +1,105 @@
+@import "fancyBox/base.fancybox.less";
+
+.b-hmrc-modal {
+  width: 100%;
+  max-width: 636px;
+  padding: 32px;
+}
+
+.b-hmrc-modal__header {
+  text-align: center;
+  font-size: @font-size-large;
+  font-family: @font-secondary;
+  color: @color-fill-primary;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  line-height: @base-line-height;
+  text-transform: uppercase;
+}
+
+.b-hmrc-modal__content {
+  text-align: center;
+}
+
+.b-hmrc-modal__text {
+  padding: 0px 15px;
+  > p {
+    font-size: @font-size-small;
+    font-family: @font-primary;
+    color: @color-text-neutral;
+    padding-bottom: 10px;
+    > a {
+      font-weight: @font-weight-bold;
+      color: @color-text-secondary-light;
+      &:hover {
+        color: @color-text-secondary;
+      }
+    }
+  }
+}
+
+.b-hmrc-modal__table {
+  font-size: @font-size-small;
+  text-align: left;
+  width: 100%;
+  color: @color-text-neutral-dark;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  tr {
+    td {
+      padding: 10px 0px;
+      float: left !important;
+      width: 100%;
+      min-width: 176px;
+      @media (min-width: @handheld) {
+        float: none !important;
+        width: auto;
+      }
+      &:first-child {
+        font-weight: @font-weight-bold;
+        text-transform: uppercase;
+      }
+    }
+    &:first-child {
+      border-bottom: 1px solid @color-fill-neutral-lighter;
+    }
+    &:nth-child(2) {
+      border-bottom: 1px solid @color-fill-neutral-lighter;
+    }
+  }
+}
+
+.b-hmrc-modal__copy-column-cell {
+  display: none;
+  width: 176px;
+}
+
+.b-hmrc-modal__copy-button {
+  width: 100%;
+  color: @color-text-neutral-light;
+  border: 1px solid @color-fill-neutral-light;
+  font-size: @font-size-tiny;
+  padding: 5px;
+  outline: none;
+  .b-hmrc-modal__copy-text {
+    display: inline-block;
+  }
+  .b-hmrc-modal__copied-text {
+    display: none;
+  }
+  &.zeroclipboard-is-hover {
+    border-color: @color-fill-neutral-dark;
+    color: @color-text-neutral-dark;
+  }
+  &.b-hmrc-modal__copied-button {
+    color: white;
+    background-color: @color-fill-secondary;
+    border-color: @color-fill-secondary;
+    .b-hmrc-modal__copy-text {
+      display: none;
+    }
+    .b-hmrc-modal__copied-text {
+      display: inline-block;
+    }
+  }
+}

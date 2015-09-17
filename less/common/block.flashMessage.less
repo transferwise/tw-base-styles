@@ -1,0 +1,66 @@
+
+.b-flash-message {
+	width: 100%;
+	min-height: 60px;
+	background: white;
+	margin-top: -30px;
+	margin-bottom: 10px;
+	box-shadow: 0 1px 4px fadeout(#033d5a, 70%);
+}
+
+@media screen and (max-width: 767px) and (min-width: 50px) {
+	.b-flash-message {
+		margin-top: 0;
+	}
+}
+
+.b-flash-message__icon {
+	width: 80px;
+	height: 100%;
+	min-height: 60px;
+}
+
+.b-flash-message__text {
+	padding: 20px 0;
+	font-weight: 500;
+	font-size: 16px;
+}
+
+.b-close {
+	width: 10px;
+	height: 10px;
+	margin-right: 27px;
+	margin-top: 25px;
+	cursor: pointer;
+	background: url("/images/messages/close-msg.png") no-repeat center center;
+}
+
+.b-flash-message_success {
+	border-bottom: 3px solid #90bb0c;
+	.b-flash-message__icon {
+		background: url("/images/messages/success-msg.png") no-repeat center center;
+	}
+	.b-flash-message__text {
+		color: #90bb0c;
+	}
+}
+
+.b-flash-message_warning {
+	border-bottom: 3px solid #e9cb53;
+	.b-flash-message__icon {
+		background: url("/images/messages/notice-msg.png") no-repeat center center;
+	}
+	.b-flash-message__text {
+		color: #666666;
+	}
+}
+
+.b-flash-message_error {
+	border-bottom: 3px solid #e95353;
+	.b-flash-message__icon {
+		background: url("/images/messages/error-msg.png") no-repeat center center;
+	}
+	.b-flash-message__text {
+		color: #e95555;
+	}
+}

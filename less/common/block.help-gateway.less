@@ -1,0 +1,269 @@
+body .SnapABug_Button {
+	z-index: @z-index-live-chat-button !important;
+}
+
+.b-help-gateway-wrapper {
+	z-index: @z-index-help-gateway-wrapper !important;
+}
+
+.b-help-gateway {
+
+	&__link {
+		z-index: @z-index-help-gateway-link;
+
+		position: fixed;
+		right: 5%;
+		bottom: 0;
+
+		min-width: 80px;
+		padding: 5px 18px;
+
+		color: #fff;
+		background: @color-fill-secondary;
+
+		font-family: @font-primary;
+		font-size: @font-size-small;
+		font-weight: 500;
+		text-align: center;
+
+		-webkit-border-top-left-radius: 2px;
+		-webkit-border-top-right-radius: 2px;
+		-moz-border-radius-topleft: 2px;
+		-moz-border-radius-topright: 2px;
+		border-top-left-radius: 2px;
+		border-top-right-radius: 2px;
+
+		box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+
+		cursor: pointer;
+
+		&:hover {
+			color: #fff;
+			background-color: @color-fill-secondary-light;
+		}
+	}
+
+	&__modal {
+		padding-bottom: 20px;
+
+		background: @color-fill-grey-light;
+		font-family: @font-primary;
+		text-align: center;
+
+		&:before {
+			.i-tw-badge;
+
+			content: '';
+			position: relative;
+			top: -32px;
+			display: block;
+			width: 100%;
+			height: 60px;
+			margin: 0 auto;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		& > section {
+			overflow: hidden;
+			margin-top: -10px;
+		}
+	}
+
+	&__close {
+		z-index: 1000;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		color: @color-fill-primary;
+		font-size: @font-size-bit-larger;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	h1 {
+		padding: 0;
+		color: @color-fill-primary;
+		font-family: @font-secondary;
+		font-size: 30px;
+		font-weight: @font-weight-medium;
+		line-height: 40px;
+		text-transform: uppercase;
+	}
+
+	h2 {
+		color: @color-text-neutral;
+		font-size: 20px;
+		font-weight: 100;
+		line-height: 30px;
+	}
+
+	a {
+		color: @color-fill-secondary-darker;
+		font-size: @font-size-normal;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+
+		&.b-help-gateway__small-link {
+			color: @color-fill-primary;
+			font-size: @font-size-tiny;
+			text-decoration: underline;
+
+			&:hover {
+				color: @color-fill-black;
+			}
+		}
+	}
+
+	hr {
+		height: 1px;
+		margin: 0 0 20px 0;
+		background: #ddd;
+		border: 0;
+	}
+
+	button {
+		display: block;
+
+		margin: 0 auto;
+		margin-top: 30px;
+		margin-bottom: 20px;
+
+		padding: 8px 20px;
+		color: @color-text-secondary-light;
+		background: @color-fill-grey-light;
+		font-size: @font-size-small;
+		font-weight: @font-weight-normal;
+		border: 1px solid @color-fill-secondary-light;
+		-webkit-border-radius: 1px;
+		-moz-border-radius: 1px;
+		border-radius: 1px;
+
+		outline: none;
+		cursor: pointer;
+
+		&:hover {
+			color: @color-text-secondary-dark;
+			border-color: @color-fill-secondary-dark;
+		}
+	}
+
+	&__length-long {
+		width: 100%;
+		padding: 0 20px;
+	}
+
+	&__length-medium {
+		width: 450px;
+		padding: 0 20px;
+
+		@media only screen and (max-width: @smallmobile) {
+			width: 100%;
+		}
+	}
+
+	&__faq-list * {
+		display: block;
+		margin: 20px 0;
+	}
+
+	&__contacts-list {
+		overflow: hidden;
+		margin: 16px 0 18px;
+
+		.b-help-gateway__contact-item {
+			display: inline-block;
+
+			width: 150px;
+			height: 120px;
+			margin: 20px 10px 0 10px;
+			color: @color-fill-black;
+			background-color: @color-fill-neutral-lightest;
+			font-size: @font-size-medium;
+			font-weight: @font-weight-medium;
+			text-align: center;
+
+			border: 1px solid @color-fill-neutral-light;
+			-webkit-border-radius: 4px;
+			-moz-border-radius: 4px;
+			border-radius: 4px;
+
+			&:hover {
+				border-color: @color-text-secondary;
+				cursor: pointer;
+
+				.b-help-gateway__icon {
+					color: @color-text-secondary;
+				}
+			}
+		}
+	}
+
+	&__icon {
+		margin: 15px 0;
+		height: 40px;
+		color: #c4c6c7;
+		line-height: 40px;
+
+		&:hover {
+			color: @color-text-secondary;
+		}
+	}
+
+	&__live-chat-icon {
+		margin: 20px 0 10px;
+		font-size: 32px;
+	}
+
+	&__call-icon {
+		font-size: 50px;
+	}
+
+	&__email-icon {
+		font-size: 50px;
+	}
+
+	&__email {
+		display: inline-block;
+		margin: 50px 0 30px;
+		color: @color-text-secondary-light;
+		font-size: 24px;
+
+		@media only screen and (max-width: @smallmobile) {
+			font-size: 20px;
+		}
+	}
+
+	&__call-list {
+		overflow: hidden;
+		margin-top: 20px;
+
+		& > div {
+			display: inline-block;
+			margin: 20px;
+		}
+	}
+
+	&__country {
+		font-size: @font-size-normal;
+	}
+
+	&__number {
+		margin: 10px 0;
+		color: @color-fill-secondary-darker;
+		font-size: @font-size-small;
+	}
+
+	&__opened-times {
+		color: @color-fill-neutral-light;
+		font-size: @font-size-small;
+	}
+}
+
+.SnapABug_Button {
+	right: 5%;
+	left: auto!important;
+}
