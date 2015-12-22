@@ -466,3 +466,45 @@
 .social-button__text:hover {
 	background-color: #eaeff1;
 }
+
+.round-green-button {
+  padding: 8px 20px 7px;
+  background: @color-tw-green-minus-10;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+
+  .border-radius(2px);
+  text-transform: uppercase;
+
+  .transition(all .2s ease-in-out);
+
+  &:hover {
+	color: #fff;
+	background: @color-tw-green-minus-20;
+  }
+
+  &:active {
+	color: #fff;
+	background: @color-tw-green;
+  }
+}
+
+.round-boundry-button {
+  padding: 8px 20px 7px;
+  color: @color-tw-light-blue;
+  border: @color-tw-light-blue;
+  border-style: solid !important;
+  background-color: transparent;
+  border-width: 1px;
+  font-weight: @font-weight-bold;
+
+  .border-radius(2px);
+  text-transform: uppercase;
+
+  &:hover, &:active {
+	color: @color-tw-light-blue-minus-10;
+	border: @color-tw-light-blue-minus-10;
+	border-width: 1px;
+  }
+}

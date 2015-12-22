@@ -1,7 +1,7 @@
 @z-index-live-chat-button: 1300;
 @z-index-help-gateway-link: 1400;
 @z-index-help-gateway-wrapper: 1402;
-@z-index-testimonials: 1500;
-@z-index-nav: 5000;
-@z-index-nav-mobile-overlay: 5001;
-@z-index-nav-mobile-list: 5002;
+@z-index-nav: 1000;
+@z-index-testimonials: @z-index-nav - 1;
+@z-index-nav-mobile-overlay: @z-index-nav + 1;
+@z-index-nav-mobile-list: @z-index-nav-mobile-overlay + 1;
