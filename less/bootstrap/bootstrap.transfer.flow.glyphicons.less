@@ -1,0 +1,20 @@
+.b-bootstrap-wrap {
+	@import "twbootstrap/less/glyphicons.less";
+}
+@import "twbootstrap/less/variables.less";
+//custom temporary styles for migration
+
+//rewrites variable in variables.less
+@icon-font-path:    "../bootstrap/twbootstrap/fonts/";
+
+.b-bootstrap-wrap {
+	.form-control + .text-info {
+		margin-top: 15px !important;
+		font-size: 17px !important;
+	}
+	a.form-control-feedback {
+		text-decoration: none;
+		cursor: pointer;
+		pointer-events: auto;
+	}
+}
