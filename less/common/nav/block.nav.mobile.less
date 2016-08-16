@@ -2,6 +2,13 @@
 	display: none;
 }
 
+.b-nav-close {
+	padding-right: 8px;
+	@media only screen and (max-width: @tablet){
+		padding-right: 0px;
+	}
+}
+
 @media only screen and (min-width: @tablet) and (max-width: @desktop) {
 	.m-hide-text {
 		&.b-nav__logo-link {
@@ -24,6 +31,13 @@
 
 	tw-navigation.m-absolute {
 		height: 52px;
+	}
+
+	tw-navigation .b-nav {
+		position: relative !important;
+		&.l-show-mobile-list {
+			position: fixed !important;
+		}
 	}
 
 	.b-nav__container {
@@ -169,4 +183,16 @@
     .l-overflow-hidden {
 	    overflow: hidden;
     }
+
+    .b-nav__mobile_language-dropdown{
+		position: relative;
+		top: 8px;
+	}
+
+	.b-nav__language-dropdown .b-nav__dropdown-item {
+		width: auto;
+	}
+	.b-nav__language-dropdown-link .b-nav__list-item {
+		padding-left: 22px;
+	}
 }

@@ -490,6 +490,29 @@
   }
 }
 
+.round-blue-button {
+  padding: 8px 20px 7px;
+  background: @color-tw-light-blue;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+
+  .border-radius(2px);
+  text-transform: uppercase;
+
+  .transition(all .2s ease-in-out);
+
+  &:hover {
+	color: #fff;
+	background: @color-tw-light-blue-minus-10;
+  }
+
+  &:active {
+	color: #fff;
+	background: @color-tw-light-blue;
+  }
+}
+
 .round-boundry-button {
   padding: 8px 20px 7px;
   color: @color-tw-light-blue;
