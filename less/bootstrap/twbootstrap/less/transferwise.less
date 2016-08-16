@@ -1,0 +1,290 @@
+.section,
+.footer {
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+.bg-default {
+    background-color: @gray-base;
+
+    :not(.panel) {
+        h1, h2 {
+            color: @brand-blue;
+        }
+    }
+}
+.jumbotron,
+.bg-primary,
+.bg-info {
+    h1, h2, h3, h4, h5, h6 {
+        color: @brand-white;
+    }
+}
+
+.bg-info .btn-default {
+    border-color: @brand-white;
+    background-color: @brand-white;
+
+    &:hover {
+        border-color: @brand-smoke-plus-20;
+        background-color: @brand-smoke-plus-20;
+        color: #00b9ff;
+    }
+    &:active {
+        border-color: @brand-smoke-plus-10;
+        background-color: @brand-smoke-plus-10;
+        color: #00b9ff;
+    }
+}
+
+
+.nav,
+.navbar,
+.pager,
+.list-group,
+.dropdown-menu {
+    a {
+        text-decoration: none;
+    }
+}
+a.btn {
+    text-decoration: none;
+}
+
+.label {
+    padding: 0.3em 0.6em 0.2em;
+}
+
+.nav > li > a {
+    padding: 11px 16px 9px;
+}
+.navbar-nav > li > a,
+.navbar-brand,
+.navbar-text {
+    padding-top: 18.5px;
+    padding-bottom: 16.5px;
+}
+
+address {
+    margin-bottom: 11px;
+}
+footer {
+    background-color: @gray-base;
+}
+blockquote footer {
+    background-color: transparent;
+}
+
+@media (max-width: @screen-xs-max) {
+    footer {
+        position: relative;
+    }
+
+    .navbar .navbar-brand {
+        margin-left: 15px !important;
+    }
+}
+
+.well,
+.form-control,
+.btn:active,
+.btn.active {
+    box-shadow: none;
+}
+
+.btn-default[disabled] .glyphicon {
+    color: @gray-light;
+}
+
+
+//.btn,
+//.input-group-addon,
+.pagination > li > a,
+.pagination > li > span {
+    padding: 7px 12px 5px;
+
+    .caret {
+        margin-top: -3px;
+    }
+}
+
+.bg-info a:not(.btn) {
+    color: @brand-white;
+
+    &:hover,
+    &:focus {
+        color: @brand-smoke-plus-20;
+    }
+
+    &:active {
+        color: @brand-smoke-plus-10;
+    }
+}
+
+.navbar[data-spy~=affix] + * {
+    margin-top: 0;
+}
+.navbar[data-spy~=affix].affix + * {
+    margin-top: 60px;
+}
+
+@media (min-width: @screen-sm-min) {
+    .navbar + .jumbotron,
+    .navbar + .jumbotron-image {
+        margin-top: -60px;
+    }
+    .navbar.affix + .jumbotron,
+    .navbar.affix + .jumbotron-image {
+        margin-top: 0px;
+    }
+}
+
+.navbar + .jumbotron,
+.navbar + .jumbotron-image > .jumbotron {
+    padding-bottom: 100px;
+
+    @media (min-width: @screen-sm-min) {
+        padding-top: 104px;
+        padding-bottom: 120px;
+    }
+}
+
+.navbar {
+    > .container .navbar-brand,
+    > .container-fluid .navbar-brand {
+        margin-left: 0;
+    }
+
+    .navbar-btn {
+        margin-top: 13px;
+        margin-bottom: 13px;
+    }
+}
+
+
+@media (max-width: @screen-xs-max) {
+    .navbar .collapse,
+    .navbar .collapsing {
+        background-color: @brand-primary;
+    }
+
+    .navbar {
+        background-color: @brand-primary;
+        border-bottom-color: transparent;
+    }
+}
+
+
+footer,
+.bg-default {
+    background-color: @gray-base;
+
+    h1, h2, h3, h4, h5, h6 {
+        color: @brand-primary;
+    }
+}
+footer {
+    a:not(.btn) {
+
+        color: @brand-grey-plus-20;
+
+        &:hover,
+        &:focus {
+            color: @brand-grey-plus-10;
+        }
+
+        &:active {
+            color: @brand-grey;
+        }
+    }
+}
+
+
+.logo {
+    background-image: @logo-full-primary;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    &.logo-primary {
+        background-image: @logo-primary;
+    }
+    &.logo-inverse {
+        background-image: @logo-inverse;
+    }
+    &.logo-full-primary {
+        background-image: @logo-full-primary;
+    }
+    &.logo-full-inverse {
+        background-image: @logo-full-inverse;
+    }
+}
+
+.flag {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-image: @flag-default;
+
+    &.flag-default {
+        background-image: @flag-default;
+    }
+    &.flag-info {
+        background-image: @flag-info;
+    }
+}
+
+
+
+
+.badge {
+    top: -1px;
+    position: relative;
+}
+.list-group-item > .badge {
+    top: 0;
+}
+
+.alert {
+    .close {
+        opacity: 0.7;
+    }
+}
+.alert-dismissable .close,
+.alert-dismissible .close {
+    top: -1px;
+}
+
+.modal-content {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    border: none;
+}
+.modal-header {
+    padding: 17px 15px 13px;
+
+    .close {
+        margin-top: 4px;
+    }
+}
+.popover {
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+}
+.popover-title {
+    padding: 9px 14px 7px;
+}
+
+.dropdown-menu > li:not(.dropdown-header) {
+    padding-left: 0;
+}
+
+.navbar {
+    .glyphicon {
+        font-size: 22px;
+
+        + .badge {
+            margin-top: -25px;
+            margin-left: -12px;
+            min-width: 18px;
+            padding: 2px 3px;
+            border: 2px solid @brand-blue;
+        }
+    }
+}
